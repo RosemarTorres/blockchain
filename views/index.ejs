@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Principal</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src='/js/alertConfig.js'></script>
+    <!--Stylesheet-->
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(74, 128, 135);
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -70px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+
+.social{
+  margin-top: 30px;
+  display: flex;
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+.contenido{
+	position: absolute;
+	width: 100%;
+	height:100%;
+}
+h1{
+	color:wheat;
+	text-align:center;
+	width:100%;
+	margin-top:15rem;
+	font-family:sans-serif;
+	font-size:2.5rem;
+	margin-bottom:2rem;
+}
+h2{
+	color: white;
+	text-align:center;
+}
+.estrellas{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap:1rem;
+}
+nav{
+	position:fixed;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	gap:2rem;
+	width: 100%;
+	padding: 2rem;
+	background:rgba(0,0,0,.8);
+	backdrop-filter:blur(3px);
+}
+nav button{
+	border-radius: 10px;
+	padding: .5rem;
+	width:10%;
+}
+nav h2{
+	font-family:sans-serif;
+	font-size:1.9rem;
+}
+button:hover{
+	cursor:pointer;
+}
+.contenedorPuntuacion{
+    margin-top:2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.contenedorPuntuacion p{
+    font-size:1.7rem;
+    color:white;
+}
+.salirr{
+    width:10%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+     background:rgb(0,0,0,.7);
+     margin:2rem auto;
+     padding:.4rem;
+     border-radius:10px;
+}
+.salirr a{
+    color: white;
+    text-decoration:none;
+    font-size:1.6rem;
+    
+
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+   <nav>
+   	<h2>Blockchain</h2>
+   	
+   </nav>
+    <div class="contenido">
+
+    	<h1>Bienvenido al Sistema</h1>
+    	 <div class='estrellas' data-usuario="<%=usuario%>">
+                     <img src="/icon/estrella.png" width="24" class="estrella" data-valor='1' title="1">
+                     
+                     <img src="/icon/estrella.png" width="24" class="estrella" data-valor='2' title="2">
+
+                     <img src="/icon/estrella.png" width="24" class="estrella" data-valor='3' title="3">
+
+                     <img src="/icon/estrella.png" width="24" class="estrella" data-valor='4' title="4">
+
+                     <img src="/icon/estrella.png" width="24" class="estrella" data-valor='5' data-producto_id='1' title="5">
+                 </div>
+                 <div class='contenedorPuntuacion'>
+                     <p class='calificaServicios'>¡Califica nuestros servicios!</p>
+                 </div>  
+                 <div class="salirr">
+                      <a href='/login'>Cerrar</a>
+                 </div>  
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="/js/puntuaciones.js"></script>
+
+</body>
+</html>

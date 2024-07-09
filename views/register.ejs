@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080710;
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left:-15rem;
+    top: 20rem;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right:-16rem;
+    bottom:-20rem;
+}
+form{
+    height:auto;
+    width:50rem;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    margin:2rem auto;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    text-align: center;
+    line-height:.6rem;
+    margin-top: 50px;
+    width:20%;
+    background-color: #ffffff;
+    color: #080710;
+    padding:1rem;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.social{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap:3rem;
+ 
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+
+    </style>
+    <script type="text/javascript" src='/js/alertConfig.js'></script>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form class="formulario">
+        <h3>Registro</h3>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="Ingrese nombre" id="nombre" required>
+        
+        <label for="apellido">Apellido</label>
+        <input type="text" placeholder="Ingrese apellido" id="apellido" required>
+        
+        <label for="fecha">Fecha Nacimiento</label>
+        <input type="date" placeholder=" Fecha Nacimiento" id="fecha" required>
+        
+        <label for="edad">Edad</label>
+        <input type="number" placeholder="Ingrese edad" id="edad" required>
+
+        <label for="cedula">Cedula</label>
+        <input type="number" placeholder="Ingrese cedula" id="cedula" required>
+
+        <label for="correo">Correo</label>
+        <input type="email" placeholder="Ingrese correo" id="correo" required>
+
+        <label for="password">Contraseña</label>
+        <input type="password" placeholder="Ingrese contraseña" id="password" required>
+
+        <label for="password2">Confirma contraseña</label>
+        <input type="password" placeholder="Confirma contraseña" id="password2" required>
+
+
+        
+        <div class="social">
+            <button>Registrar</button>
+            <button class="go">Login</button>
+        </div>
+    </form>
+</body>
+</html>
+<!-- partial -->
+   <script type="text/javascript">
+       const formulario = document.querySelector(".formulario");
+       formulario.addEventListener("submit",(e)=>{
+        e.preventDefault();
+
+        const p1 = document.querySelector("#password").value;
+        const p2 = document.querySelector("#password2").value;
+        const nombre = document.getElementById("nombre").value;
+        const apellido = document.getElementById("apellido").value;
+        const fecha = document.getElementById("fecha").value;
+        const edad = document.getElementById("edad").value;
+        const cedula = document.getElementById("cedula").value;
+        const correo = document.getElementById("correo").value;
+        
+        if(p1 !== p2){
+        Swal.fire('¡Las contraseñas no coinciden , vuelve a intentarlo!');
+        }else{
+        const baul = {
+            nombre,
+            apellido,
+            fecha,
+            edad,
+            cedula,
+            correo,
+            password:p1
+        }
+           fetch('http://195.200.1.171:5000/registerPost',{
+            method:"post",
+            headers:{
+            "Content-Type":"application/json"
+            },
+            body:JSON.stringify(baul)
+        })
+        .then(res=>res.json())
+        .then(res=>{
+         if(res.interruptor == true){
+          Swal.fire('¡Te haz registrado exitosamente, tus datos estaran descentralizados en una red Blockchain !')
+          .then(()=>{
+           window.location.href='/login';
+          })
+         }else if(res.interruptor == "O"){
+          Swal.fire('¡Ya estas registrado , intenta con datos diferentes!');
+         }else{
+          Swal.fire('¡Al parecer algo salio mal , intenta mas tarde!');
+         }
+        });
+
+        
+        }
+        
+
+       });
+    </script>
+     <script type="text/javascript">
+        const go = document.querySelector(".go");
+        go.addEventListener("click",(e)=>{
+        e.preventDefault();
+        window.location.href='/login';  
+        });
+    </script>
+</body>
+</html>
